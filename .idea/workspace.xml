@@ -19,8 +19,8 @@
       <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/patch_report/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="391">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,7 +111,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
-  <component name="ReplState" timestamp="1495647453825">{:repl-history {:ide [], :local [{:command &quot;(ns)&quot;, :offset 3, :ns &quot;user&quot;} {:command &quot;*ns&quot;, :offset 3, :ns &quot;user&quot;} {:command &quot;*ns*&quot;, :offset 4, :ns &quot;user&quot;} {:command &quot;(ns patch-report.core)&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(foo)&quot;, :offset 0, :ns &quot;patch-report.core&quot;} {:command &quot;(foo \&quot;\&quot;)&quot;, :offset 6, :ns &quot;patch-report.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1495654629754">{:repl-history {:ide [], :local [{:command &quot;(ns)&quot;, :offset 3, :ns &quot;user&quot;} {:command &quot;*ns&quot;, :offset 3, :ns &quot;user&quot;} {:command &quot;*ns*&quot;, :offset 4, :ns &quot;user&quot;} {:command &quot;(ns patch-report.core)&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(foo)&quot;, :offset 0, :ns &quot;patch-report.core&quot;} {:command &quot;(foo \&quot;\&quot;)&quot;, :offset 6, :ns &quot;patch-report.core&quot;}], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.REPL for patch-report">
     <configuration default="false" name="REPL for patch-report" type="ClojureREPL" factoryName="Local" temporary="true">
       <setting name="replType" value="1" />
@@ -531,12 +531,12 @@
       <option name="presentableId" value="Default" />
       <updated>1495644412460</updated>
       <workItem from="1495644414825" duration="1148000" />
-      <workItem from="1495646320658" duration="1018000" />
+      <workItem from="1495646320658" duration="5885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2166000" />
+    <option name="totallyTimeSpent" value="7033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -546,7 +546,7 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.525" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5173611" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -607,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/patch_report/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
