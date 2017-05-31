@@ -1,14 +1,8 @@
 # patch-report
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed to report server patch versions.
 
 ## Usage
 
-FIXME
+java -jar patch-report.jar <DBUSER> <DBPASS>
 
-## License
-
-Copyright © 2017 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
