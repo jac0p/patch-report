@@ -1,5 +1,7 @@
 (ns patch-report.core
-  (require [clojure.java.jdbc :as sql])
+  (require [clojure.java.jdbc :as sql]
+           [clojure.java.shell]
+           )
   (:gen-class))
 
 
