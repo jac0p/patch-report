@@ -1,13 +1,8 @@
 (ns patch-report.core
   (require [clojure.java.jdbc :as sql]
            [clojure.java.shell]
-           )
+           [clojure.edn :as edn])
   (:gen-class))
-
-
-(def DB {:dbtype "postgresql"
-         :dbname "patch_mgmt"
-         :host   "localhost"})
 
 
 ;; PARSING
@@ -42,9 +37,9 @@
 
 
 
-(defn -main [db-user db-pass]
+(defn -main [db-spec]
   (println "Please run patch report script with the following parameters:")
-  (println "java -jar patch-report.jar <DBUSER> <DBPASS>\n")
+  (println "java -jar patch-report.jar <DBCONFIG>\n")
 
   (print "Creating patch report..")
   (let [os-report (hash-map :hostname (clojure.string/trim-newline (:out (hostname)))
@@ -57,7 +52,7 @@
     (print "Sending report to database..")
 
     ;; send data here
-    (let [DB (merge DB {:user db-user :password db-pass})
+    (let [DB (edn/read-string (slurp db-spec))
           hostname (:hostname os-report)
           query (str "SELECT count(*) FROM reports WHERE hostname = '" hostname "'")
           count (:count (into {} (sql/query DB [query])))]
