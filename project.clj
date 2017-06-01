@@ -9,7 +9,7 @@
   :main patch-report.core
   ;:aot [patch-report.core]
   :uberjar-exclusions [#"user.clj"]
-  :uberjar-name "patch-report.jar"
+  :uberjar-name "patch-report-agent.jar"
   :uberjar {:aot :all}
 
   )
