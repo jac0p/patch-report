@@ -4,7 +4,7 @@ A script designed to report server patch versions.
 
 ## Usage
 
-java -jar patch-report.jar DBCONFIG
+java -jar patch-report-agent.jar DBCONFIG
 
 #### Sample db config
 ```edn
