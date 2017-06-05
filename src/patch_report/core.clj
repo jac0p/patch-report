@@ -28,7 +28,6 @@
 
 (defn kernel-version []
   ;; returns kernel version of machine
-  ;(clojure.java.shell/sh (nth (get-in OS-COMMANDS [:rhel-7 :os]) 0))
   (clojure.java.shell/sh "uname" "-r"))
 
 (defn check-update []
@@ -44,7 +43,7 @@
   (print "Creating patch report..")
   (let [os-report (hash-map :hostname (clojure.string/trim-newline (:out (hostname)))
                             :kernel (clojure.string/trim-newline (:out (kernel-version)))
-                            :patches (clojure.string/trim-newline (package-info (:out (check-update))))
+                            :patches (clojure.string/trim-newline (:out (check-update)))
                             ;:patches "gcc++ v12.34343.34"
                             :last_update (java.sql.Timestamp. (.getTime (java.util.Date.))))]
     (println "Done!")
