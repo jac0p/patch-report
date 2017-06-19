@@ -8,7 +8,7 @@
 ;; PARSING
 (defn split-packages [coll]
   ;; splits available packages from yum output
-  (clojure.string/split (nth (clojure.string/split coll #"\n\n") 1) #"\n"))
+  (nth (clojure.string/split coll #"\n\n") 1))
 
 
 
@@ -24,14 +24,17 @@
 ;; OS calls
 (defn hostname []
   ;; returns hostname of machine
+  (println "checking hostname")
   (clojure.java.shell/sh "hostname"))
 
 (defn kernel-version []
   ;; returns kernel version of machine
+  (println "checking kernel")
   (clojure.java.shell/sh "uname" "-r"))
 
 (defn check-update []
   ;; returns available yum updates
+  (println "checking updates")
   (clojure.java.shell/sh "yum" "check-update"))
 
 
@@ -43,10 +46,14 @@
   (print "Creating patch report..")
   (let [os-report (hash-map :hostname (clojure.string/trim-newline (:out (hostname)))
                             :kernel (clojure.string/trim-newline (:out (kernel-version)))
-                            :patches (clojure.string/trim-newline (:out (check-update)))
+                            :patches (split-packages (clojure.string/trim-newline (:out (check-update))))
                             ;:patches "gcc++ v12.34343.34"
                             :last_update (java.sql.Timestamp. (.getTime (java.util.Date.))))]
     (println "Done!")
+
+    (println (str "hostname: " (:hostname os-report)))
+    (println (str "kernel: " (:kernel os-report)))
+    (println (str "patches:\n" (:patches os-report)))
 
     (print "Sending report to database..")
 
@@ -61,5 +68,8 @@
         (sql/update! DB :reports os-report ["hostname = ?" hostname])))
 
     ;(println (sql/query DB ["SELECT * FROM reports"]))
-    (println "Done!")))
+    (println "Done!"))
+  
+  
+  (System/exit 0))
 
